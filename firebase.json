@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+     // Add the "rewrites" attribute within "hosting"
+     "rewrites": [ {
+      "source": "**",
+      "function": "app"
+    } ]
+  }
+}
