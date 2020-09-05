@@ -1,0 +1,30 @@
+{
+  "name": "UnicornHack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjkal23jk/UnicornHack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fjkal23jk/UnicornHack/issues"
+  },
+  "homepage": "https://github.com/fjkal23jk/UnicornHack#readme",
+  "dependencies": {
+    "firebase-admin": "^9.1.1",
+    "firebase-functions": "^3.11.0",
+    "jquery": "^3.5.1",
+    "puppeteer": "^5.2.1",
+    "puppeteer-core": "^5.2.1",
+    "uniqid": "^5.2.0",
+    "util.promisify": "^1.0.1",
+    "ws": "^7.3.1"
+  }
+}

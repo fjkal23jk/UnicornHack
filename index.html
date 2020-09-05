@@ -7,8 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="./img/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
-
+    <title>Sign In</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
     <!-- Bootstrap core CSS -->
@@ -16,25 +15,72 @@
 
     <!-- Custom styles for this template -->
     <link href="./style/style.css" rel="stylesheet">
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyAQiz13c32AySBQNEdiQSj7zv7sZ12r1yU",
+            authDomain: "AIzaSyAQiz13c32AySBQNEdiQSj7zv7sZ12r1yU",
+            databaseURL: "https://unicornhack-289c8.firebaseio.com",
+            projectId: "unicornhack-289c8",
+            storageBucket: "unicornhack-289c8.appspot.com",
+            messagingSenderId: "182074761105",
+            appId: "1:182074761105:web:e7b238843001d8b4210430"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Initialize Cloud Functions through Firebase
+        var functions = firebase.functions();
+    </script>
   </head>
 
   <body class="text-center">
     <form class="form-signin">
-      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      <img class="mb-4" src="./img/unicorn.jpg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Create or join room</h1>
+      <label for="inputBV" class="sr-only">Email address</label>
+      <input type="email" id="inputBV" class="form-control" placeholder="BV号" autofocus>
+      <br/>
+      <button id="create" class="btn btn-lg btn-primary btn-block" type="button">Create Room</button>
+      <br/>
+      <label for="inputRoom" class="sr-only">Password</label>
+      <input type="text" id="inputRoom" class="form-control" placeholder="房间号">
+      <br/>
+      <button id="join" class="btn btn-lg btn-primary btn-block" type="button">Join Room</button>  
     </form>
+    <div id="myDialog" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Invalid Input</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Please input valid info</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
+
+    <script src="src/login.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

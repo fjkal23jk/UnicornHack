@@ -6,10 +6,11 @@
       "**/.*",
       "**/node_modules/**"
     ],
-     // Add the "rewrites" attribute within "hosting"
-     "rewrites": [ {
-      "source": "**",
-      "function": "app"
-    } ]
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ]
   }
 }
