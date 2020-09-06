@@ -13,10 +13,12 @@
     .navbar {
       margin-bottom: 0;
       border-radius: 0;
+      background-color: #ffffff;
     }
 
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {
+      background-color: #ffffff;
       height: 450px
     }
 
@@ -58,14 +60,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <img class="mb-4" src="./img/unicorn.jpg" alt="" width="72" height="72">
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li class="active"><a href="#">Unicorn - watch Bilibili together!</a></li>
+
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><img src="https://img.icons8.com/color/48/000000/add-user-group-woman-man.png" onclick="showModel()" />
@@ -86,19 +86,17 @@
         <iframe src="" 5scrolling="no" frameborder="no" framespacing="0" width="100%" height="800px" allowfullscreen>
         </iframe>
       </div>
-      <div class="col-sm-2 sidenav">
-        <div class="well">
-          <p>ADS</p>
-        </div>
-        <div class="well">
-          <p>ADS</p>
-        </div>
+      <div class="col-sm-2 text-left">
+        <form>
+        <textarea id="chatroom" style="height:750px;width:100%;"></textarea>
+        <input type="text" id="chat" name = "chat">
+        </form>
       </div>
     </div>
   </div>
 
   <footer class="container-fluid text-center">
-    <p>Footer Text</p>
+    <p>Unicorn - watch Bilibili together!</p>
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
